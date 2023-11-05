@@ -1,0 +1,38 @@
+//DAA Practical 1 Recursion fibbonacci
+//Simple fibbo 
+import java.util.*;
+class FibonacciExample1{  
+    public static void main(String args[]){
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter a number:");
+        int n=sc.nextInt();
+        int a=0;
+        int b=1;
+        int sum=0;
+        System.out.println(a);
+        System.out.println(b);
+        for(int i=1;i<n;i++){
+            sum=a+b;
+            System.out.println(sum);
+            a=b;    
+            b=sum;
+}}}
+
+//With recursion
+import java.util.*;
+class Fibona{  
+    public static void main(String args[]){
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter a number:");
+        int n=sc.nextInt();
+        for(int i=0;i<=n;i++){
+            System.out.println(fibo(i));
+        }
+    }
+    static int fibo(int n){
+        if(n<=1){
+            return n;
+        }
+        return fibo(n-1)+fibo(n-2);
+    }
+}
